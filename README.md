@@ -59,7 +59,7 @@ http://<minikube ip>:8000
 ```
 cp k8s/secrets.yml.example k8s/secrets.yml
 ```
-2. Replace ```<secret_key_base_here>``` to your real value. Do it for ```<db_password_here>``` too.
+2. Replace ```<secret_key_base_here>``` to your real value and do the same for ```<db_password_here>```.
 3. Apply secrets: ```kubectl create -f k8s/secrets.yml```
 4. Apply deployment: ```kubectl create -f k8s/deployment.yml```
 5. Apply service: ```kubectl create -f k8s/service.yml```
