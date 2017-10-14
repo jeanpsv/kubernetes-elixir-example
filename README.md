@@ -7,8 +7,8 @@ Elixir application into Kubernetes Cluster
 cp config/dev.secret.exs.example config/dev.secret.exs
 ```
 2. update username and password to authorize your database connection
-3. ```mix ecto.create```
-4. ```mix ecto.migrate```
+3. run ```mix ecto.create```
+4. run ```mix ecto.migrate```
 
 
 ### Run application
