@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kubernetes-elixir-example-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: kubernetes-elixir-example
+    spec:
+      containers:
+        - name: kubernetes-elixir-example
+          image: jeanpsv/kubernetes-elixir-example:release
+          ports:
+            - containerPort: 8000
+          args: ["foreground"]
+          env:
+            - name: HOST
+              value: "example.com"
+            - name: SECRET_KEY_BASE
+              valueFrom:
+                secretKeyRef:
+                  name: secrets
+                  key: secret_key_base
+            - name: DB_USERNAME
+              value: "jeanpsv"
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secrets
+                  key: db_password
+            - name: DB_NAME
+              value: "kubernetes_elixir_example_prod"
+            - name: DB_HOSTNAME
+              value: "10.0.2.2"
