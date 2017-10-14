@@ -26,4 +26,4 @@ DB_NAME=${db_name} \
 DB_HOSTNAME=${db_hostname} \
 _build/prod/rel/kubernetes_elixir_example/bin/kubernetes_elixir_example foreground
 ```
-replace ${variable} for their real values
+replace ```${variable}``` for their real values
