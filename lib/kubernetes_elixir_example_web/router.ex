@@ -7,5 +7,6 @@ defmodule KubernetesElixirExampleWeb.Router do
 
   scope "/api", KubernetesElixirExampleWeb do
     pipe_through :api
+    resources "/greetings", GreetingController, except: [:new, :edit]
   end
 end
