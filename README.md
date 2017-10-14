@@ -64,7 +64,7 @@ cp k8s/secrets.yml.example k8s/secrets.yml
 4. Apply deployment: ```kubectl create -f k8s/deployment.yml```
 5. Apply service: ```kubectl create -f k8s/service.yml```
 
-Type ```minikube service kubernetes-elixir-example-service``` open your application on browser and know the IP address.
+Type ```minikube service kubernetes-elixir-example-service``` on terminal to open your application on browser and know the IP address.
 
 ### Furthermore
 
