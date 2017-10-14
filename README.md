@@ -66,6 +66,14 @@ cp k8s/secrets.yml.example k8s/secrets.yml
 
 Type ```minikube service kubernetes-elixir-example-service``` on terminal to open your application on browser and know the IP address.
 
+You can try something like ```http:<app ip>:<app port>/api/greetings``` to see all greetings stored. I implemented CRUD operations to greetings model. So, we have the following endpoints:
+
+- GET /api/greetings
+- GET /api/greetings/:id
+- POST /api/greetings
+- PUT /api/greetings/:id
+- DELETE /api/greetings/:id
+
 ### Furthermore
 
 I followed that tutorials:
