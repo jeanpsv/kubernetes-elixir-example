@@ -1,0 +1,10 @@
+FROM elixir:1.4.2
+
+ENV DEBIAN_FRONTEND=noninteractive
+EXPOSE 8000
+ENV PORT=8000 MIX_ENV=prod REPLACE_OS_VARS=true SHELL=/bin/bash
+WORKDIR /app
+COPY ./kubernetes_elixir_example.tar.gz ./
+RUN tar xfz kubernetes_elixir_example.tar.gz
+
+ENTRYPOINT ["bin/kubernetes_elixir_example"]

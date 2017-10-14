@@ -3,6 +3,7 @@
 /db
 /deps
 /*.ez
+*.tar.gz
 
 # Generated on crash by the VM
 erl_crash.dump

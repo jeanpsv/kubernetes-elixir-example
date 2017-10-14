@@ -34,7 +34,7 @@ environment :dev do
 end
 
 environment :prod do
-  set include_erts: true
+  set include_erts: false
   set include_src: false
   set cookie: :"{ZV>lga[vXi~2A84[{3fSOm]Djw=E)GcXaIP!5=^^[{:0eR=vwy(C5kT3oI{t3Id"
 end
@@ -50,4 +50,3 @@ release :kubernetes_elixir_example do
     :runtime_tools
   ]
 end
-

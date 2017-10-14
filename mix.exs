@@ -39,7 +39,8 @@ defmodule KubernetesElixirExample.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:distillery, "~> 1.5.2"}
+      {:distillery, "~> 1.5.2"},
+      {:mix_docker, "~> 0.5.0"}
     ]
   end
 

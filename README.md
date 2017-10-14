@@ -27,3 +27,26 @@ DB_HOSTNAME=${db_hostname} \
 _build/prod/rel/kubernetes_elixir_example/bin/kubernetes_elixir_example foreground
 ```
 replace ```${variable}``` for their real values
+
+### Generate Docker images
+```
+mix docker.build
+mix docker.release
+```
+
+### Run application with Docker
+```
+docker run -it -p 8000:8000 \
+-e "HOST=example.com" \
+-e "SECRET_KEY_BASE=${secret_key_base}" \
+-e "DB_USERNAME=${db_username}" \
+-e "DB_PASSWORD=${db_password}" \
+-e "DB_NAME=${db_name}" \
+-e "DB_HOSTNAME=${db_hostname}" \
+--rm jeanpsv/kubernetes-elixir-example:release foreground
+```
+
+Run ```minikube ip``` to discover the IP address of Minikube VM and access your application in:
+```
+http://<minikube ip>:8000
+```
